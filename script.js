@@ -117,6 +117,10 @@ console.log(result8);
 
 // 9 masala
 
+function filterByPrice(array, minPrice) {
+  return array.filter((item) => item.price > minPrice);
+}
+
 const data9 = [
   { id: 1, name: "Telefon", price: 500 },
   { id: 2, name: "Noutbuk", price: 1000 },
@@ -141,6 +145,10 @@ console.log(result10);
 
 // 11 masala
 
+function checkOverdue(array, currentDate) {
+  return array.some((item) => new Date(item.dueDate) < new Date(currentDate));
+}
+
 const data11 = [
   { id: 1, task: "Email yozish", dueDate: "2025-01-01" },
   { id: 2, task: "Xarid qilish", dueDate: "2025-01-10" },
@@ -162,10 +170,6 @@ const data12 = [
 const result12 = filterByAge(data12, 18);
 console.log(result12);
 
-Output: [
-  { name: "Jasur", age: 25 },
-  { name: "Botir", age: 30 },
-];
 
 // 13 masala
 
